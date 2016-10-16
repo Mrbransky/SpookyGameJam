@@ -45,7 +45,7 @@ public class ItemBehavior : MonoBehaviour
             {
                 if (isNegativeIngredient)
                 {
-                    GameObject.Find("CountdownTimer").GetComponent<Countdown>().decreaseTime(3);
+                    GameObject.Find("CountdownTimer").GetComponent<Countdown>().decreaseTime(1);
                     GameObject.Find("IngredientText").GetComponent<IngredientText>().BadIngredient();
                 }
 
