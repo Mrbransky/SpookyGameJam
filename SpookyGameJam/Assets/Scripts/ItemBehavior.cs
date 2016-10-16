@@ -5,12 +5,11 @@ public class ItemBehavior : MonoBehaviour
 {
 
     public bool isCorrectIngredient;
+    public bool isNegativeIngredient;
     ParticleSystem splash;
     public Vector2 startPos;
     public bool isPickedUp = false;
     Manager manager;
-    [SerializeField]
-    int timerIncrease;
 
     void Start()
     {
@@ -38,14 +37,28 @@ public class ItemBehavior : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 manager.numberOfIngredientsPlaced += 1;
-                GameObject.Find("CountdownTimer").GetComponent<Countdown>().increaseTime(timerIncrease);
+                GameObject.Find("CountdownTimer").GetComponent<Countdown>().increaseTime(5);
+                GameObject.Find("IngredientText").GetComponent<IngredientText>().CorrectMessage();
                 splash.Play();
             }
             else
             {
+                if (isNegativeIngredient)
+                {
+                    GameObject.Find("CountdownTimer").GetComponent<Countdown>().decreaseTime(3);
+                    GameObject.Find("IngredientText").GetComponent<IngredientText>().BadIngredient();
+                }
+
+                else
+                    GameObject.Find("IngredientText").GetComponent<IngredientText>().IncorrectMessage();
                 manager.resetItems();
+                manager.numberOfIngredientsPlaced = 0;
                 transform.position = startPos;
             }
+
+            if (manager.numberOfIngredientsPlaced == manager.maxIngredients)
+                GameObject.Find("IngredientText").GetComponent<IngredientText>().WinMessage();
+
         }
     }
 }

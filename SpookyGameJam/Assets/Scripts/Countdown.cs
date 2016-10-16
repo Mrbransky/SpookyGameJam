@@ -12,7 +12,7 @@ public class Countdown : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        InvokeRepeating("decreaseTime", 1.0f, 1.0f);
+        InvokeRepeating("decrease", 1.0f, 1.0f);
 	
 	}
 	
@@ -26,9 +26,16 @@ public class Countdown : MonoBehaviour {
                 countdownText.color = Color.red;
             }
         }
+        else
+        {
+            GameObject.Find("IngredientText").GetComponent<IngredientText>().LoseMessage();
+            gameObject.SetActive(false);
+
+        }
+
     }
 
-    void decreaseTime()
+    void decrease()
     {
         countdownTime -= 1;
     }
@@ -36,6 +43,11 @@ public class Countdown : MonoBehaviour {
     public void increaseTime(int seconds)
     {
         countdownTime += seconds;
+    }
+
+    public void decreaseTime(int seconds)
+    {
+        countdownTime -= seconds;
     }
 
    }
