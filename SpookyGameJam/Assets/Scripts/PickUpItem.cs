@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class PickUpItem : MonoBehaviour {
 
     private GameObject[] itemsToPickFrom;
@@ -27,6 +27,10 @@ public class PickUpItem : MonoBehaviour {
             col.gameObject.transform.SetParent(this.transform);
             col.gameObject.transform.position = new Vector3(transform.position.x, transform.position.y+1.2f, 0);
             currentHeldItem = col.gameObject;
+        }
+        if(col.tag == "Door")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

@@ -7,6 +7,7 @@ public class Manager : MonoBehaviour {
 
     public int maxIngredients;
     public int numberOfIngredientsPlaced = 0;
+    public GameObject door;
 
     void Update()
     {
@@ -14,6 +15,10 @@ public class Manager : MonoBehaviour {
         {
             canFinishLevel = true;
             //go to next scene
+        }
+        if(canFinishLevel == true)
+        {
+            door.SetActive(true);
         }
     }
 }
