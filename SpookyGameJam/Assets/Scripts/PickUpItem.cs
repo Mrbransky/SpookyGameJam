@@ -43,7 +43,7 @@ public class PickUpItem : MonoBehaviour {
                 itemToPickUp.GetComponent<ItemBehavior>().isPickedUp = true;
             }
         }
-        if (col.tag == "Door")
+        if (col.tag == "Door" && GameObject.Find("GameManager").GetComponent<Manager>().canFinishLevel == true)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
