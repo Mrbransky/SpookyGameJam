@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class Movement : MonoBehaviour {
 
     public float walkSpeed;
@@ -46,5 +46,9 @@ public class Movement : MonoBehaviour {
         {
             GetComponent<SpriteRenderer>().flipX = true;
         }
+    }
+    public void restartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

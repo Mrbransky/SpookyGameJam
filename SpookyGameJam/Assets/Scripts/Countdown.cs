@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour {
 
@@ -9,9 +10,10 @@ public class Countdown : MonoBehaviour {
     [SerializeField]
     Text countdownText;
 
+    GameObject player;
     // Use this for initialization
     void Start () {
-
+        player = GameObject.Find("Player");
         InvokeRepeating("decrease", 1.0f, 1.0f);
 	
 	}
@@ -29,6 +31,7 @@ public class Countdown : MonoBehaviour {
         else
         {
             GameObject.Find("IngredientText").GetComponent<IngredientText>().LoseMessage();
+            player.GetComponent<Animator>().SetTrigger("isSlimed");
             gameObject.SetActive(false);
 
         }
@@ -49,5 +52,4 @@ public class Countdown : MonoBehaviour {
     {
         countdownTime -= seconds;
     }
-
    }
