@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 69070dac14bd6974fa3b526d2719533f
-timeCreated: 1476621207
+guid: 575f24a3083ca3e4da5c4bea77fa1bca
+timeCreated: 1476626280
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ghost (1)_0
-    21300002: ghost (1)_1
-    21300004: ghost (1)_2
-    21300006: ghost (1)_3
+    21300000: dooranimationsheet (2)_0
+    21300002: dooranimationsheet (2)_1
+    21300004: dooranimationsheet (2)_2
+    21300006: dooranimationsheet (2)_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,52 +57,52 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ghost (1)_0
+      name: dooranimationsheet (2)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 76
+        width: 351
+        height: 324
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ghost (1)_1
+      name: dooranimationsheet (2)_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 351
         y: 0
-        width: 64
-        height: 76
+        width: 351
+        height: 324
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ghost (1)_2
+      name: dooranimationsheet (2)_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 703
         y: 0
-        width: 64
-        height: 76
+        width: 350
+        height: 324
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ghost (1)_3
+      name: dooranimationsheet (2)_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 1053
         y: 0
-        width: 64
-        height: 76
+        width: 350
+        height: 324
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

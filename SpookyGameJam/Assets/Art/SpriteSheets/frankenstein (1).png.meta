@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 38e092bd58e5ae840814740e389aad7a
-timeCreated: 1476611376
+guid: 504cec8019cd481408967347883f4b73
+timeCreated: 1476625826
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: dooranimationsheet_0
-    21300002: dooranimationsheet_1
-    21300004: dooranimationsheet_2
-    21300006: dooranimationsheet_3
+    21300000: frankenstein (1)_0
+    21300002: frankenstein (1)_1
+    21300004: frankenstein (1)_2
+    21300006: frankenstein (1)_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,54 +57,54 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dooranimationsheet_0
+      name: frankenstein (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 350
-        height: 324
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        width: 75
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: dooranimationsheet_1
+      name: frankenstein (1)_1
       rect:
         serializedVersion: 2
-        x: 350
+        x: 75
         y: 0
-        width: 350
-        height: 324
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        width: 72
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: dooranimationsheet_2
+      name: frankenstein (1)_2
       rect:
         serializedVersion: 2
-        x: 700
+        x: 150
         y: 0
-        width: 350
-        height: 324
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        width: 72
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: dooranimationsheet_3
+      name: frankenstein (1)_3
       rect:
         serializedVersion: 2
-        x: 1050
+        x: 225
         y: 0
-        width: 354
-        height: 324
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        width: 75
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

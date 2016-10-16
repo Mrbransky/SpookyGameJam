@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 990347e7a7f27cb4f8e24a6db8e1ea88
-timeCreated: 1476621410
+timeCreated: 1476623701
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -60,9 +60,9 @@ TextureImporter:
       name: vampire (1)_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 0
         y: 0
-        width: 114
+        width: 129
         height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -75,7 +75,7 @@ TextureImporter:
         serializedVersion: 2
         x: 129
         y: 0
-        width: 108
+        width: 117
         height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -88,7 +88,7 @@ TextureImporter:
         serializedVersion: 2
         x: 246
         y: 0
-        width: 114
+        width: 129
         height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -101,7 +101,7 @@ TextureImporter:
         serializedVersion: 2
         x: 375
         y: 0
-        width: 108
+        width: 117
         height: 186
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

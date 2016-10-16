@@ -13,6 +13,7 @@ public class NPCBehavior : MonoBehaviour {
         {
             poof.SetActive(true);
             GetComponent<SpriteRenderer>().sprite = spriteToChange;
+            GetComponent<Animator>().enabled = true;
         }
 	}
 }
