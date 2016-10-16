@@ -6,6 +6,7 @@ public class NPCBehavior : MonoBehaviour {
     public Manager manager;
     public Sprite spriteToChange;
     public GameObject poof;
+    public RuntimeAnimatorController animToChangeTo;
 	// Update is called once per frame
 	void Update ()
     {
@@ -14,6 +15,7 @@ public class NPCBehavior : MonoBehaviour {
             poof.SetActive(true);
             GetComponent<SpriteRenderer>().sprite = spriteToChange;
             GetComponent<Animator>().enabled = true;
+            GetComponent<Animator>().runtimeAnimatorController = animToChangeTo;
         }
 	}
 }
