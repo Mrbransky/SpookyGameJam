@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Manager : MonoBehaviour {
 
+    bool canFinishLevel = false;
+
     public int maxIngredients;
     public int numberOfIngredientsPlaced = 0;
 
@@ -10,6 +12,7 @@ public class Manager : MonoBehaviour {
     {
         if(numberOfIngredientsPlaced >= maxIngredients)
         {
+            canFinishLevel = true;
             //go to next scene
         }
     }
