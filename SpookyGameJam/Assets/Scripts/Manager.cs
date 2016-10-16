@@ -8,7 +8,11 @@ public class Manager : MonoBehaviour {
     public int maxIngredients;
     public int numberOfIngredientsPlaced = 0;
     public GameObject door;
-
+    public GameObject[] items;
+    void Start()
+    {
+        items = GameObject.FindGameObjectsWithTag("Ingredient");
+    }
     void Update()
     {
         if(numberOfIngredientsPlaced >= maxIngredients)
@@ -20,6 +24,15 @@ public class Manager : MonoBehaviour {
         if(canFinishLevel == true)
         {
             door.SetActive(true);
+        }
+    }
+
+    public void resetItems()
+    {
+        foreach(GameObject item in items)
+        {
+            item.transform.position = item.GetComponent<ItemBehavior>().startPos;
+            item.SetActive(true);
         }
     }
 }

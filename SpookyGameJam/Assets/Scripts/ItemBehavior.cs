@@ -6,8 +6,9 @@ public class ItemBehavior : MonoBehaviour
 
     public bool isCorrectIngredient;
     ParticleSystem splash;
-    Vector2 startPos;
+    public Vector2 startPos;
     public bool isPickedUp = false;
+    Manager manager;
     [SerializeField]
     int timerIncrease;
 
@@ -15,6 +16,7 @@ public class ItemBehavior : MonoBehaviour
     {
         startPos = transform.position;
         splash = GameObject.Find("Splash").GetComponent<ParticleSystem>();
+        manager = GameObject.Find("GameManager").GetComponent<Manager>();
     }
     void Update()
     {
@@ -34,13 +36,14 @@ public class ItemBehavior : MonoBehaviour
         {
             if (isCorrectIngredient)
             {
-                Destroy(gameObject);
-                GameObject.Find("GameManager").GetComponent<Manager>().numberOfIngredientsPlaced += 1;
+                gameObject.SetActive(false);
+                manager.numberOfIngredientsPlaced += 1;
                 GameObject.Find("CountdownTimer").GetComponent<Countdown>().increaseTime(timerIncrease);
                 splash.Play();
             }
             else
             {
+                manager.resetItems();
                 transform.position = startPos;
             }
         }

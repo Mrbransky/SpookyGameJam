@@ -30,5 +30,21 @@ public class Movement : MonoBehaviour {
     void Update()
     {
         GetComponent<SpriteRenderer>().sortingOrder = (int)-transform.position.y;
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            GetComponent<Animator>().SetBool("isWalking", true);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("isWalking", false);
+        }
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 }

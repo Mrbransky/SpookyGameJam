@@ -6,6 +6,7 @@ public class PickUpItem : MonoBehaviour {
     private GameObject[] itemsToPickFrom;
     private GameObject currentHeldItem;
     private GameObject itemToPickUp;
+
     void Start()
     {
         itemsToPickFrom = GameObject.FindGameObjectsWithTag("Ingredient");
@@ -41,10 +42,10 @@ public class PickUpItem : MonoBehaviour {
                 currentHeldItem = itemToPickUp;
                 itemToPickUp.GetComponent<ItemBehavior>().isPickedUp = true;
             }
-            if (col.tag == "Door")
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            }
+        }
+        if (col.tag == "Door")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
