@@ -12,7 +12,6 @@ public class LetterAnimation : MonoBehaviour {
     float delay;
     [SerializeField]
     Canvas messageCanvas;
-    [SerializeField]
     GameObject player;
     GameObject timer;
 
