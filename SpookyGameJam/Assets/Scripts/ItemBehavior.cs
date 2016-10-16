@@ -5,6 +5,8 @@ public class ItemBehavior : MonoBehaviour {
 
     public bool isCorrectIngredient;
     Vector2 startPos;
+    [SerializeField]
+    int timerIncrease;
 
     void Start()
     {
@@ -18,6 +20,7 @@ public class ItemBehavior : MonoBehaviour {
                 {
                 Destroy(gameObject);
                 GameObject.Find("GameManager").GetComponent<Manager>().numberOfIngredientsPlaced += 1;
+                GameObject.Find("CountdownTimer").GetComponent<Countdown>().increaseTime(timerIncrease);
                 }
                 else
                 {
