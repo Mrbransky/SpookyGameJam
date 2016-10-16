@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Manager : MonoBehaviour {
 
-    bool canFinishLevel = false;
+    public bool canFinishLevel = false;
 
     public int maxIngredients;
     public int numberOfIngredientsPlaced = 0;
@@ -14,6 +14,7 @@ public class Manager : MonoBehaviour {
         if(numberOfIngredientsPlaced >= maxIngredients)
         {
             canFinishLevel = true;
+            door.transform.parent.GetComponent<Animator>().SetTrigger("doorOpen");
             //go to next scene
         }
         if(canFinishLevel == true)
