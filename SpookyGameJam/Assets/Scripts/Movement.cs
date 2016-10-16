@@ -9,6 +9,8 @@ public class Movement : MonoBehaviour {
     private Vector2 pos;
     private GameObject currentRoom;
     public GameObject interactable;
+    private Vector3 lastPosition;
+
 	void Awake () {
 
         currentRoom = GameObject.FindGameObjectWithTag("Room");
@@ -27,6 +29,5 @@ public class Movement : MonoBehaviour {
 	}
     void Update()
     {
-        //interactable
     }
 }
