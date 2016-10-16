@@ -10,7 +10,7 @@ public class MenuNav : MonoBehaviour {
     }
     public void LoadCredits()
     {
-        //SceneManager.LoadScene()
+        SceneManager.LoadScene(6);
     }
     public void EndGame()
     {
