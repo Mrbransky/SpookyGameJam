@@ -12,9 +12,16 @@ public class LetterAnimation : MonoBehaviour {
     float delay;
     [SerializeField]
     Canvas messageCanvas;
+    [SerializeField]
+    GameObject player;
+    GameObject timer;
 
     void Start()
     {
+        player = GameObject.Find("Player");
+        timer = GameObject.Find("CountdownTimer");
+      
+        player.GetComponent<Movement>().enabled = false;
         messageCanvas.enabled = false;
         StartCoroutine(Wait());
         StartCoroutine(AnimateText());
@@ -41,6 +48,8 @@ public class LetterAnimation : MonoBehaviour {
         }
 
         messageCanvas.enabled = false;
+        player.GetComponent<Movement>().enabled = true;
+        timer.GetComponent<Countdown>().enabled = true;
     }
 
 
